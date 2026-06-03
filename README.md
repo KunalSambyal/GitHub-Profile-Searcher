@@ -1,10 +1,10 @@
-# 🔍 GitHub Profile Searcher
+# GitHub Profile Searcher
 
 A simple GitHub Profile Search application built using HTML, CSS, and JavaScript.
 
 Users can search for any GitHub profile and view basic information fetched from the GitHub REST API.
 
-## 🚀 Features
+## Features
 
 - Search GitHub users by username
 - Display profile picture
@@ -15,18 +15,18 @@ Users can search for any GitHub profile and view basic information fetched from 
 - Error handling for invalid usernames
 - Responsive design
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - HTML
 - CSS
 - JavaScript
 - GitHub REST API
 
-## 📸 Preview
+## Preview
 
 ![GitHub Profile Searcher](screenshot.png)
 
-## 🎯 What I Learned
+## What I Learned
 
 - Working with REST APIs
 - Using Fetch API
@@ -37,7 +37,7 @@ Users can search for any GitHub profile and view basic information fetched from 
 - JavaScript Destructuring
 - Dynamic Content Rendering
 
-## 🔮 Future Improvements
+## Future Improvements
 
 - Dark/Light Theme
 - Loading Spinner
@@ -46,7 +46,7 @@ Users can search for any GitHub profile and view basic information fetched from 
 - Show Location and Company
 - Repository Search
 
-## ▶️ How to Run
+## ▶How to Run
 
 1. Clone the repository
 
@@ -58,10 +58,10 @@ git clone https://github.com/your-username/github-profile-searcher.git
 
 3. Run `index.html` in your browser
 
-## 👨‍💻 Author
+## Author
 
 **Kunal Sambyal**
 
-## ⭐ Support
+## Support
 
 If you like this project, consider giving it a star on GitHub.
