@@ -10,15 +10,17 @@ function showErrorMessage(message) {
 const profileImg = document.getElementById("profileImg");
 const profileName = document.getElementById("actualName");
 const userName = document.getElementById("userName");
+const profileRepos = document.getElementById("profileRepos");
 const profileFollowers = document.getElementById("profileFollower");
 const profileFollowing = document.getElementById("profileFollowing");
 const profileBio = document.getElementById("profileBio");
 const gitHubLink = document.getElementById("gitHubLink");
 
 function updateHTML(data, username) {
-    let { avatar_url, name, bio, login, followers, following } = data;
+    let { avatar_url, name, bio, login, followers, following, public_repos } =
+        data;
 
-    profileLink = `https://github.com/${username}`;
+    let profileLink = `https://github.com/${username}`;
 
     if (bio === null) {
         bio = "";
@@ -27,10 +29,13 @@ function updateHTML(data, username) {
     profileImg.src = avatar_url;
     profileName.textContent = `Name: ${name}`;
     userName.textContent = `Username: ${login}`;
+    profileRepos.textContent = `Repos: ${public_repos}`;
     profileFollowers.textContent = `Followers: ${followers}`;
     profileFollowing.textContent = `Following: ${following}`;
     profileBio.textContent = `Bio: ${bio}`;
     gitHubLink.href = profileLink;
+
+    profileCard.style.visibility = "visible";
 }
 
 async function getProfile(profileName) {
@@ -74,5 +79,4 @@ form.addEventListener("submit", (event) => {
     // Hide the Error Box
     displayError.style.opacity = 0;
     getProfile(userInput);
-    profileCard.style.visibility = "visible";
 });
