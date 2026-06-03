@@ -93,6 +93,48 @@ body {
     transition: opacity ease-in-out 0.2s;
 }
 
+.outputContainer {
+    max-width: 1000px;
+    width: 100%;
+    padding: 2rem 1rem;
+}
+
+#profileCard {
+    display: flex;
+    visibility: hidden;
+    gap: 2rem;
+}
+
+.profileDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+#profileImg {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid var(--main-accent-color);
+}
+
+.profileName {
+    font-size: 1.8rem;
+}
+
+.profileFollow {
+    font-size: 1.2rem;
+}
+
+#gitHubLink {
+    font-size: 1.4rem;
+    color: black;
+}
+
+.profileBio {
+    font-size: 1.6rem;
+}
+
 @media screen and (max-width: 500px) {
     .container {
         padding: 1rem 0;
