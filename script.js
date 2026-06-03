@@ -9,7 +9,6 @@ async function getProfile(profileName) {
     try {
         // Check if user input empty or not
         if (!profileName) {
-            showErrorMessage("Empty profile name!");
             throw new Error("Empty profile name!");
         }
 
@@ -18,9 +17,11 @@ async function getProfile(profileName) {
             `https://api.github.com/users/${profileName}`,
         );
 
-        // Check API response
+        // Check API response and status
         if (!response.ok) {
-            showErrorMessage("Something went wrong");
+            if (response.status === 404) {
+                throw new Error("User not found!");
+            }
             throw new Error("Something went wrong");
         }
 
@@ -31,7 +32,7 @@ async function getProfile(profileName) {
         const { avatar_url, name, bio, login } = data;
         console.log(avatar_url, name, bio, login);
     } catch (error) {
-        showErrorMessage(error);
+        showErrorMessage(error.message);
         console.error(error);
     }
 }
@@ -43,5 +44,7 @@ form.addEventListener("submit", (event) => {
 
     const allFields = Object.fromEntries(new FormData(form));
     const { userInput } = allFields;
+
+    displayError.style.display = "none";
     getProfile(userInput);
 });
