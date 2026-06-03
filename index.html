@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>GitHub Profile Search</title>
+        <link rel="stylesheet" href="/style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="mainHeading">
+                <h1>GitHub Profile Searcher</h1>
+            </div>
+            <div class="userInputBox">
+                <form action="/submit" id="searchInput">
+                    <input
+                        type="text"
+                        name="userInput"
+                        class="userInput"
+                        id="userInput"
+                        placeholder="Enter profile name"
+                    />
+                    <button type="submit" class="submitBtn">Search</button>
+                </form>
+                <div id="errorBox"></div>
+            </div>
+        </div>
+        <main class="outputContainer"></main>
+        <script src="/script.js"></script>
+    </body>
+</html>
