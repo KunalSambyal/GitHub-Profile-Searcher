@@ -2,6 +2,7 @@
     --main-accent-color: hsl(257, 60%, 50%);
     --hover-accent-color: hsl(257, 60%, 40%);
     --main-text: hsl(0, 0%, 95%);
+    --error-bg: hsla(0, 100%, 50%, 0.3);
 }
 
 * {
@@ -83,12 +84,13 @@ body {
 }
 
 #errorBox {
-    display: none;
+    opacity: 0;
     font-size: 16px;
     font-weight: 600;
-    background-color: hsla(0, 100%, 50%, 0.3);
+    background-color: var(--error-bg);
     padding: 0.8rem;
     border-radius: 8px;
+    transition: opacity ease-in-out 0.2s;
 }
 
 @media screen and (max-width: 500px) {

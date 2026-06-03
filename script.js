@@ -2,7 +2,7 @@ const displayError = document.getElementById("errorBox");
 
 function showErrorMessage(message) {
     displayError.textContent = message;
-    displayError.style.display = "block";
+    displayError.style.opacity = 1;
 }
 
 async function getProfile(profileName) {
@@ -45,6 +45,8 @@ form.addEventListener("submit", (event) => {
     const allFields = Object.fromEntries(new FormData(form));
     const { userInput } = allFields;
 
-    displayError.style.display = "none";
+    // Hide the Error Box
+    displayError.style.opacity = 0;
+
     getProfile(userInput);
 });
