@@ -4,6 +4,8 @@ A simple GitHub Profile Search application built using HTML, CSS, and JavaScript
 
 Users can search for any GitHub profile and view basic information fetched from the GitHub REST API.
 
+New version '/v2' with improved Ui using tailwindcss - not completed yet
+
 ## Features
 
 - Search GitHub users by username
@@ -46,7 +48,7 @@ Users can search for any GitHub profile and view basic information fetched from 
 - Show Location and Company
 - Repository Search
 
-## ▶How to Run
+## How to Run
 
 1. Clone the repository
 
