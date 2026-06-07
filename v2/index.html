@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="/v2/style.css" />
+
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+        <title>GitHub Profile Finder V2</title>
+    </head>
+    <body class="flex flex-col gap-y-6 items-center bg-black text-white h-full">
+        <div
+            class="flex flex-col justify-center items-center gap-y-2 pt-6 w-full"
+        >
+            <div class="text-3xl max-sm:text-2xl font-bold">
+                <h1>GitHub Profile Finder V2</h1>
+            </div>
+            <div class="flex flex-col items-center relative">
+                <form
+                    action="/submit"
+                    id="searchInput"
+                    class="rounded-sm flex justify-center"
+                >
+                    <input
+                        type="text"
+                        name="userInput"
+                        class="h-10 pl-4 outline-0 bg-neutral-800 rounded-sm bg-none w-80"
+                        id="userInput"
+                        placeholder="Enter profile name"
+                    />
+                    <button
+                        type="submit"
+                        class="bg-violet-800 px-4 py-2 rounded-sm absolute right-0 cursor-pointer hover:bg-violet-700 active:bg-violet-900"
+                    >
+                        Search
+                    </button>
+                </form>
+                <div id="errorBox" class="text-red-500 pt-2">Fuck</div>
+            </div>
+        </div>
+        <main
+            class=" max-w-full w-[80%] flex items-center justify-center"
+        >
+            <div id="profileCard" class="flex gap-8">
+                <div>
+                    <img
+                        src="/screenshot.png"
+                        alt="profile image"
+                        id="profileImg"
+                        class="h-20 w-20 rounded-full border-2 border-violet-700"
+                    />
+                </div>
+                <div>
+                    <div>
+                        <span id="actualName">Kunal Sambyal</span>
+                        <span id="userName">KunalSambyal</span>
+                    </div>
+                    <div id="profileRepos">Repos: 16</div>
+                    <div>
+                        <span id="profileFollower"> Followers: 8 </span>
+                        <span id="profileFollowing"> Following: 8 </span>
+                    </div>
+                    <div>
+                        <a href="" id="gitHubLink">Go To GitHub</a>
+                    </div>
+                    <div id="profileBio">Crazy projects</div>
+                </div>
+            </div>
+        </main>
+
+        <script src="/script.js"></script>
+    </body>
+</html>
